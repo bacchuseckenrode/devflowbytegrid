@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Technical Compliance Guide · devflowbytegrid.com — 2026 Engineering Standards</title>
+    <meta name="description" content="The 2026 Technical Compliance Guide of devflowbytegrid.com. Required reading for engineering teams: iOS 18 ATT enforcement, Android 15 Privacy Sandbox, Apple App Store privacy labels, Google Play data safety form, SDK transparency, data residency, and interaction design compliance.">
+    <meta name="keywords" content="technical compliance, ATT, App Tracking Transparency, Privacy Sandbox, Android 15, iOS 18, App Store, Google Play, data safety form, privacy labels, SDK, devflowbytegrid, GDPR, DSA">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://devflowbytegrid.com/technical-compliance.html">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%2300d4ff'/%3E%3Cstop offset='100%25' stop-color='%237c3aed'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cpath d='M32 4 L56 18 L56 46 L32 60 L8 46 L8 18 Z' stroke='url(%23g)' stroke-width='2' fill='none'/%3E%3Ccircle cx='32' cy='32' r='6' fill='url(%23g)'/%3E%3C/svg%3E">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/pages.css">
+    <meta property="og:title" content="Technical Compliance Guide · devflowbytegrid.com">
+    <meta property="og:description" content="2026 engineering standards and technical compliance guidance for our iOS and Android Applications.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://devflowbytegrid.com/technical-compliance.html">
+</head>
+<body>
+    <div class="preloader"><div class="preloader-content"><div class="preloader-logo"><svg viewBox="0 0 64 64" fill="none" width="80" height="80"><defs><linearGradient id="pg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#00d4ff"/><stop offset="100%" stop-color="#7c3aed"/></linearGradient></defs><path d="M32 4 L56 18 L56 46 L32 60 L8 46 L8 18 Z" stroke="url(#pg)" stroke-width="2" fill="none"/><circle cx="32" cy="32" r="6" fill="url(#pg)"/></svg><div class="preloader-spinner"></div></div><div class="preloader-text">Initialising</div></div></div>
+
+    <header class="site-header">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <svg viewBox="0 0 64 64" fill="none"><defs><linearGradient id="h" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#00d4ff"/><stop offset="100%" stop-color="#7c3aed"/></linearGradient></defs><path d="M32 4 L56 18 L56 46 L32 60 L8 46 L8 18 Z" stroke="url(#h)" stroke-width="2.5" fill="none"/><path d="M16 20 L32 12 L48 20 L48 36 L32 52 L16 36 Z" stroke="url(#h)" stroke-width="2" fill="none"/><circle cx="32" cy="32" r="6" fill="url(#h)"/></svg>
+                <div class="logo-text"><span>devflowbytegrid</span><small>R&D STUDIO · UK</small></div>
+            </a>
+            <nav><ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="services.html" class="nav-link">Services</a></li>
+                <li><a href="advantages.html" class="nav-link">Advantages</a></li>
+                <li><a href="news.html" class="nav-link">News</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul></nav>
+            <div class="nav-cta">
+                <a href="contact.html" class="btn btn-primary magnetic">Contact Us <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+                <button class="mobile-toggle" aria-label="Open menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-hero">
+            <div class="page-hero-bg"></div>
+            <div class="container">
+                <div class="page-hero-content">
+                    <div class="page-hero-eyebrow">ENGINEERING · v2026.01</div>
+                    <h1 class="page-hero-title">Technical Compliance Guide</h1>
+                    <p class="page-hero-subtitle">The 2026 engineering standards for every Application we ship. Required reading for any engineer or vendor contributing to our codebase. Supersedes all prior internal technical guidelines.</p>
+                    <nav class="breadcrumb"><a href="index.html">Home</a><span class="breadcrumb-separator">/</span><span>Technical Compliance Guide</span></nav>
+                </div>
+            </div>
+        </section>
+
+        <section style="padding: var(--space-12) 0;">
+            <div class="container">
+                <div class="legal-layout">
+                    <aside class="legal-toc">
+                        <h3 class="legal-toc-title">Table of Contents</h3>
+                        <ul class="legal-toc-list">
+                            <li><a href="#preamble">Purpose & Scope</a></li>
+                            <li><a href="#apple">Apple App Store (iOS 18)</a></li>
+                            <li><a href="#google">Google Play (Android 15)</a></li>
+                            <li><a href="#residency">2026 Data Residency</a></li>
+                            <li><a href="#interaction">Interaction Design Compliance</a></li>
+                            <li><a href="#risk">Risk Prevention & Audit</a></li>
+                            <li><a href="#review">Periodic Review</a></li>
+                            <li><a href="#contact">Contact</a></li>
+                        </ul>
+                    </aside>
+
+                    <article class="legal-doc">
+                        <div class="legal-meta">
+                            <div class="legal-meta-item"><strong>Version:</strong> 2026.01</div>
+                            <div class="legal-meta-item"><strong>Effective:</strong> 01 January 2026</div>
+                            <div class="legal-meta-item"><strong>Audience:</strong> Engineering · QA · Vendor Management</div>
+                            <div class="legal-meta-item"><strong>Review cycle:</strong> Every 6 months minimum</div>
+                        </div>
+
+                        <div class="callout">
+                            <div class="callout-title">Purpose of this guide</div>
+                            <p>This guide is the technical counterpart to our <a href="privacy-policy.html">Privacy Policy</a> and <a href="terms-of-service.html">Terms of Service</a>. It translates legal requirements into concrete engineering specifications, code-level guard-rails and release-gate checks. It is informed by the latest Apple App Store Review Guidelines, Google Play Developer Program Policies, Apple iOS 18, Android 15, Android Privacy Sandbox, the EU DSA, GDPR, and the 2026 state-by-state US privacy patchwork.</p>
+                        </div>
+
+                        <h2 id="preamble">1. Purpose & Scope</h2>
+                        <p>This guide applies to every Application published by devflowbytegrid.com on the Apple App Store, the Google Play Store, and any future distribution channel. It also applies to:</p>
+                        <ul>
+                            <li>All third-party SDKs integrated into our Applications (advertising, attribution, payment, analytics, crash reporting, AI inference);</li>
+                            <li>All CI / CD pipelines that build, sign and ship our binaries;</li>
+                            <li>All vendor and contractor engagements that touch our codebase, infrastructure or distribution metadata.</li>
+                        </ul>
+                        <p>Non-compliance with this guide is treated as a release-blocker. Each Application build is gated by automated checks against the rules in this document.</p>
+
+                        <h2 id="apple">2. Apple App Store (iOS 18)</h2>
+
+                        <h3>2.1 Privacy Labels (App Store Connect)</h3>
+                        <p>Every Application must accurately complete the App Store Connect Privacy Labels. Because device identifiers, purchase records and behavioural telemetry are linked to user profiles, we mark <strong>"Data Linked to User"</strong> accurately and never misrepresent the linkage.</p>
+                        <ul>
+                            <li>The data-collection scope, purpose and third-party sharing fields must exactly match the latest version of our Privacy Policy;</li>
+                            <li>Any change in data handling requires updating Privacy Labels in the same release cycle;</li>
+                            <li>Submitting false or misleading Privacy Labels is grounds for App Review rejection and store removal.</li>
+                        </ul>
+
+                        <h3>2.2 App Tracking Transparency (ATT) — iOS 14.5+ enforcement, including iOS 18 updates</h3>
+                        <p>The ATT framework is enforced as follows across every Application:</p>
+                        <ol>
+                            <li>The <code>requestTrackingAuthorization()</code> API is called <em>before</em> any IDFA is read, used or transmitted;</li>
+                            <li>The consent prompt copy clearly states the purpose of the request (e.g. "Allow devflowbytegrid to show you personalised advertising. You can change this anytime in Settings.");</li>
+                            <li>If the user denies (<code>ATTrackingManager.AuthorizationStatus.denied</code>), <code>allow_tracking = false</code> is propagated to <strong>every</strong> third-party SDK that consumes IDFA;</li>
+                            <li>No covert means of recovering IDFA (such as fingerprinting MAC address, IMEI, system clock offset, or any other device parameter as a stand-in for IDFA) are used;</li>
+                            <li>Per Apple's iOS 18 enforcement: the ATT prompt is shown at most once per app installation. Subsequent prompts are not shown; users are directed to system Settings;</li>
+                            <li>We do not gate any non-personalised functionality behind the ATT prompt. Denying tracking must not impair the core user experience.</li>
+                        </ol>
+
+                        <h3>2.3 iOS 18 additional technical requirements</h3>
+                        <ul>
+                            <li>Apps must not contain hidden features or covert code paths designed to evade App Review (for example, hidden payment entry, falsified feature descriptions);</li>
+                            <li>Sensitive-data access (Photos, Contacts, Calendar, Microphone, Camera, Motion, Local Network, Bluetooth) is gated by per-use prompts with a clear purpose string. Default authorisation is never granted;</li>
+                            <li>In-app purchase items clearly display price, currency, subscription period and renewal cadence. Dark-pattern paywalls are prohibited;</li>
+                            <li>Apps that include AI-generated content must declare this on the App Store detail page and comply with Apple's emerging AI compliance expectations;</li>
+                            <li>All Applications support the latest iOS 18 privacy manifest format and declare Required Reason API usage for every flagged API.</li>
+                        </ul>
+
+                        <h2 id="google">3. Google Play (Android 14 / Android 15)</h2>
+
+                        <h3>3.1 Data Safety Form</h3>
+                        <p>Every Application must accurately complete the Google Play Data Safety form. Specifically:</p>
+                        <ul>
+                            <li>Declare that data in transit is protected by <strong>HTTPS (TLS 1.3 minimum)</strong>;</li>
+                            <li>Declare that data at rest is protected by <strong>AES-256</strong>;</li>
+                            <li>Data-collection scope, purpose and third-party sharing fields must exactly match the latest version of our Privacy Policy;</li>
+                            <li>Submitting false or misleading declarations is grounds for Play Store rejection and store removal.</li>
+                        </ul>
+
+                        <h3>3.2 SDK Transparency & Privacy Sandbox (2026 requirements)</h3>
+                        <p>Google requires developers to take full responsibility for the behaviour of the third-party SDKs they integrate. The following rules apply:</p>
+                        <ul>
+                            <li>Every integrated SDK must support the latest <strong>Android 14+ Privacy Sandbox</strong> APIs (Topics API, Protected Audience API, Attribution Reporting API). SDKs that are out of date or unsupported must be upgraded or removed before release;</li>
+                            <li>An up-to-date SDK manifest is published in the Google Play Console, including SDK name, version, vendor, purpose and declared data-collection scope;</li>
+                            <li>Each release audits each SDK's manifest against actual runtime behaviour (using Firebase App Check and automated privacy compliance scans). SDKs that violate the manifest must be removed;</li>
+                            <li>SDKs must not request permissions unrelated to their function (e.g. an ad SDK requesting location permission);</li>
+                            <li>Applications must support Android 15's Private Space feature: medical-category apps must warn the user not to install inside Private Space; launcher-category apps must declare required permissions and adapt their behaviour accordingly.</li>
+                        </ul>
+
+                        <h3>3.3 Android 15 additional technical requirements</h3>
+                        <ul>
+                            <li>Support the Android 15 OTP-hiding API: in screen-share and screen-record scenarios, OTP fields are hidden by default and can be manually toggled by the user;</li>
+                            <li>Display a prominent "Screen sharing active" notification whenever the screen is being cast, recorded or shared with another device, in accordance with Android 15's screen-share notification requirement;</li>
+                            <li>Apps must not contain malicious code or covert advertising plug-ins. Forced push advertising, deceptive install flows, and ad-stacking are prohibited under Google Play's ad policy;</li>
+                            <li>Apps must support 64-bit architecture. 32-bit-only releases are no longer accepted;</li>
+                            <li>Apps containing subscriptions must surface a clear subscription-management entry, support in-app cancellation, and comply with Google Play's subscription policy.</li>
+                        </ul>
+
+                        <h2 id="residency">4. 2026 Data Residency Compliance</h2>
+                        <p>With the global rise in data sovereignty, every Application must comply with the following residency rules:</p>
+
+                        <h3>4.1 Local storage thresholds</h3>
+                        <p>Where an Application has a significant user base in any of the following jurisdictions (the thresholds being defined by the applicable local law), user data must be stored on servers physically located within that jurisdiction:</p>
+                        <table class="data-table">
+                            <thead><tr><th>Jurisdiction</th><th>Local storage requirement</th><th>Regulator</th></tr></thead>
+                            <tbody>
+                                <tr><td>China (PRC)</td><td>All personal information of PRC residents must be stored on PRC servers; cross-border transfer requires CAC Security Assessment, Standard Contract or Certification</td><td>Cyberspace Administration of China (CAC)</td></tr>
+                                <tr><td>Russia</td><td>Personal data of Russian citizens must be stored on Russian servers; cross-border transfer requires local regulatory approval</td><td>Roskomnadzor</td></tr>
+                                <tr><td>India</td><td>Cross-border transfer requires DPDP Act Section 16 approval (or negative-list exemption); critical personal data must be hosted in India</td><td>Ministry of Electronics & IT (MeitY)</td></tr>
+                                <tr><td>Saudi Arabia</td><td>Personal data of Saudi residents must be hosted in Saudi Arabia (or in jurisdictions with equivalent PDPL protections)</td><td>National Data Management Office (NDMO)</td></tr>
+                                <tr><td>Brazil</td><td>Personal data may be hosted abroad subject to ANPD authorisation and SCCs</td><td>Autoridade Nacional de Proteção de Dados (ANPD)</td></tr>
+                                <tr><td>Canada</td><td>Quebec Law 25 requires data residency for personal information collected in Quebec</td><td>Commission d'accès à l'information</td></tr>
+                                <tr><td>Indonesia</td><td>Public-service electronic system operators must host data in Indonesia</td><td>Ministry of Communication & Informatics</td></tr>
+                                <tr><td>Bolivia, Colombia, Peru (LATAM 2026)</td><td>Local residency requirements recently enacted; affected Applications must complete a residency assessment within 90 days of the regulation's effective date</td><td>National DPAs</td></tr>
+                            </tbody>
+                        </table>
+
+                        <h3>4.2 Cross-border transfer mechanisms</h3>
+                        <ul>
+                            <li><strong>EU / UK → third countries:</strong> European Commission Standard Contractual Clauses (SCCs, 2021 modules) + UK International Data Transfer Addendum + Transfer Impact Assessment (TIA);</li>
+                            <li><strong>US:</strong> Compliance with the Executive Order 14086 / EU-US Data Privacy Framework where applicable;</li>
+                            <li><strong>China outbound:</strong> CAC Security Assessment, Standard Contract or Certification as required by the Cross-border Data Flow Provisions (effective 2024, updated 2026);</li>
+                            <li><strong>India outbound:</strong> DPDP Act Section 16 governmental approval, or to jurisdictions on the central government's negative-list exemption;</li>
+                                <li><strong>Brazil outbound:</strong> ANPD authorisation or standard contractual clauses;</li>
+                            <li><strong>Other regions:</strong> Contractual safeguards + supplementary technical measures (pseudonymisation, encryption).</li>
+                        </ul>
+
+                        <h3>4.3 Residency compliance register</h3>
+                        <p>We maintain a <strong>Data Residency Compliance Register</strong> recording, for every Application: the storage location of every category of user data; the legal basis for any cross-border transfer; the date of the last residency audit; the responsible compliance owner. The register is reviewed quarterly.</p>
+
+                        <h2 id="interaction">5. Interaction Design Compliance</h2>
+
+                        <h3>5.1 Double-confirmation mechanism</h3>
+                        <p>To prevent accidental high-value purchases and to comply with App Store / Play Store guidance on user protection:</p>
+                        <ul>
+                            <li>For any in-app purchase of <strong>50 USD / EUR / GBP equivalent or more per single transaction</strong>, the Application must display an additional in-app second-confirmation dialog before handing off to the platform payment sheet. The dialog must clearly state the purchase amount, item name and payment method, and require an explicit "Confirm purchase" tap;</li>
+                            <li>For auto-renewing subscriptions, after the user taps "Subscribe", a confirmation dialog must appear stating the subscription period, price, renewal cadence, and direct cancellation path;</li>
+                            <li>For account deletion, a typed-confirmation or held-button mechanism is required to prevent accidental loss of data.</li>
+                        </ul>
+
+                        <h3>5.2 Privacy Policy discoverability (mandatory)</h3>
+                        <p>The Privacy Policy link must exist in <strong>all three</strong> of the following locations simultaneously, in compliance with global regulations:</p>
+                        <ol>
+                            <li><strong>App Store detail page</strong> (Apple App Store / Google Play description) — prominently placed;</li>
+                            <li><strong>App launch / splash screen</strong> — the user can tap the link to view the full policy. The splash screen offers "Agree" and "Decline" buttons. If the user declines, the Application cannot be used;</li>
+                            <li><strong>In-app "Settings" or "About"</strong> — the link is placed prominently and remains accessible at all times.</li>
+                        </ol>
+
+                        <h3>5.3 Permission requests</h3>
+                        <ul>
+                            <li>Every permission request (Camera, Photos, Microphone, Location, Contacts, Calendar, Motion, Bluetooth, Local Network, Tracking) must be preceded by an in-app contextual explanation of why the permission is needed;</li>
+                            <li>Default authorisation is never granted;</li>
+                            <li>Users may revoke any permission at any time via the in-app or system settings.</li>
+                        </ul>
+
+                        <h3>5.4 Ad interaction</h3>
+                        <ul>
+                            <li>Rewarded video ads are clearly labelled "Watch the full ad to earn a reward";</li>
+                            <li>A visible "Skip" or close button is provided no later than 5 seconds into the ad. Ads are never truly unskippable;</li>
+                            <li>Frequency capping is enforced at the platform level (mediation SDK configuration).</li>
+                        </ul>
+
+                        <h3>5.5 Complaint & feedback channels</h3>
+                        <ul>
+                            <li>The Application surfaces easy-to-find complaint channels for privacy complaints, ad complaints, UGC complaints, and general feedback;</li>
+                            <li>Response time is no more than 7 working days;</li>
+                            <li>Resolution outcome is communicated to the complainant.</li>
+                        </ul>
+
+                        <h3>5.6 DSA transparency display</h3>
+                        <p>Where the Application falls within DSA scope, the Application surfaces in a prominent, non-buried location: (i) ad-placement rules; (ii) the main parameters of any recommender system; (iii) the data-processing flow (simplified).</p>
+
+                        <h3>5.7 Screen-share protection (Android 15+)</h3>
+                        <p>In line with Android 15 expectations, when the screen is being cast, recorded or shared, the Application displays a prominent "Screen sharing active" label in the status bar. Tapping the label opens a quick action to stop sharing.</p>
+
+                        <h2 id="risk">6. Compliance Risk Prevention & Audit</h2>
+
+                        <h3>6.1 Compliance review pipeline</h3>
+                        <ul>
+                            <li><strong>Pre-build:</strong> CI checks lint the source tree for forbidden API patterns (e.g. raw MAC address access, NSUserTrackingUsageDescription absence, raw location collection without declaration);</li>
+                            <li><strong>Pre-submit:</strong> Manual privacy label / data safety form reconciliation, ATT prompt flow screenshot review, app-ads.txt presence check, manifest verification;</li>
+                            <li><strong>Post-release:</strong> Quarterly automated SDK behaviour audit using App Privacy Report (iOS) and Android Privacy Sandbox reports.</li>
+                        </ul>
+
+                        <h3>6.2 Regulatory knowledge management</h3>
+                        <p>A dedicated compliance team monitors global privacy and store-policy updates (US state-level laws, EU DSA enforcement, Android Privacy Sandbox milestones, App Store Review Guidelines revisions). Each material change triggers a guideline refresh and a re-audit of in-flight releases.</p>
+
+                        <h3>6.3 Third-party partner management</h3>
+                        <ul>
+                            <li>NDAs, DPAs and compliance questionnaires are mandatory for every vendor with access to user data;</li>
+                            <li>Vendor compliance is audited annually. Findings trigger remediation plans with deadlines. Severe or persistent violations result in termination;</li>
+                            <li>Sub-processor lists are published in-app and updated within 30 days of any change.</li>
+                        </ul>
+
+                        <h3>6.4 User-request handling</h3>
+                        <ul>
+                            <li>A dedicated user-request workflow processes access, correction, deletion, portability and complaint requests within the time limits defined by the user's jurisdiction;</li>
+                            <li>Each request is logged end-to-end, with immutable audit records retained per GDPR Art. 30 and equivalent local record-keeping rules;</li>
+                            <li>Process metrics (response time, resolution rate) are reviewed monthly.</li>
+                        </ul>
+
+                        <h3>6.5 Security safeguards</h3>
+                        <ul>
+                            <li>All Application code is scanned by static analysis (SAST), dynamic analysis (DAST) and software composition analysis (SCA) on every commit;</li>
+                            <li>Dependencies are pinned and rebuilt weekly;</li>
+                            <li>Annual third-party penetration test, continuous automated security testing;</li>
+                            <li>72-hour breach-notification commitment to regulators (GDPR Art. 33) and to users where there is a likely high risk to their rights.</li>
+                        </ul>
+
+                        <h3>6.6 Staff training</h3>
+                        <p>All engineering, operations and customer-support staff receive mandatory privacy and compliance training on hire, and refreshers every six months. Completion is tracked and audited.</p>
+
+                        <h2 id="review">7. Periodic Review</h2>
+                        <p>Because the global legal environment (and store policy environment) is in continuous flux, we conduct a full review of this guide and of each Application's compliance posture every <strong>6 months</strong>. Specific items in scope:</p>
+                        <ul>
+                            <li>Privacy Policy & Terms of Service wording vs. latest regulation;</li>
+                            <li>App behaviour vs. latest iOS / Android technical baselines (iOS 18, Android 15, Privacy Sandbox);</li>
+                            <li>Data flow residency vs. latest national residency requirements;</li>
+                            <li>Ad / IAP anti-fraud rules vs. latest observed fraud patterns;</li>
+                            <li>SDK inventory vs. latest SDK audit and version pinning policy;</li>
+                            <li>User request handling performance vs. SLA.</li>
+                        </ul>
+                        <p>Material changes trigger a new release with updated Privacy Policy, updated Privacy Labels / Data Safety form and (where required) re-consent flows for existing users.</p>
+
+                        <h2 id="contact">8. Contact</h2>
+                        <p>For any question, suggestion or report concerning this guide:</p>
+                        <ul>
+                            <li><strong>Engineering compliance:</strong> <a href="mailto:compliance@devflowbytegrid.com">compliance@devflowbytegrid.com</a></li>
+                            <li><strong>Privacy & data requests:</strong> <a href="mailto:privacy@devflowbytegrid.com">privacy@devflowbytegrid.com</a></li>
+                            <li><strong>Security disclosure:</strong> <a href="mailto:security@devflowbytegrid.com">security@devflowbytegrid.com</a></li>
+                            <li><strong>Postal address:</strong> Engineering Compliance, devflowbytegrid.com, Warwick Software Industrial Park, Warwick, CV34, United Kingdom</li>
+                        </ul>
+
+                        <div class="callout-success">
+                            <div class="callout-title">Document version & history</div>
+                            <p>This is <strong>Version 2026.01</strong>, effective 01 January 2026. The previous version (2025.03) is archived in our internal compliance repository and may be requested via the email addresses above.</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo"><svg viewBox="0 0 64 64" fill="none"><defs><linearGradient id="fg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#00d4ff"/><stop offset="100%" stop-color="#7c3aed"/></linearGradient></defs><path d="M32 4 L56 18 L56 46 L32 60 L8 46 L8 18 Z" stroke="url(#fg)" stroke-width="2.5" fill="none"/><path d="M16 20 L32 12 L48 20 L48 36 L32 52 L16 36 Z" stroke="url(#fg)" stroke-width="2" fill="none"/><circle cx="32" cy="32" r="6" fill="url(#fg)"/></svg><div class="logo-text"><span>devflowbytegrid</span><small>R&D STUDIO · UK</small></div></a>
+                    <p>A Warwick-based R&D studio engineering minimalist, locally-architected iOS applications.</p>
+                    <div class="footer-social"><a href="#" class="social-link" aria-label="Twitter"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a><a href="#" class="social-link" aria-label="GitHub"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.02 10.02 0 0 0 22 12.017C22 6.484 17.522 2 12 2z"/></svg></a><a href="#" class="social-link" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.063 2.063 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452z"/></svg></a></div>
+                </div>
+                <div class="footer-col"><h4>Studio</h4><ul class="footer-list"><li><a href="index.html">Home</a></li><li><a href="services.html">Services</a></li><li><a href="advantages.html">Advantages</a></li><li><a href="news.html">News</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+                <div class="footer-col"><h4>Capabilities</h4><ul class="footer-list"><li><a href="services.html#audio">Programmatic Audio</a></li><li><a href="services.html#visual">Visual Interaction</a></li><li><a href="services.html#privacy">Privacy Architecture</a></li><li><a href="services.html#monetization">App Store Compliance</a></li><li><a href="services.html#data">Local Data Layer</a></li></ul></div>
+                <div class="footer-col"><h4>Contact</h4><ul class="footer-list"><li><a href="mailto:support@devflowbytegrid.com">support@devflowbytegrid.com</a></li><li><a href="mailto:contact@devflowbytegrid.com">contact@devflowbytegrid.com</a></li><li><a href="contact.html">Warwick Software Industrial Park</a></li><li><a href="contact.html">United Kingdom</a></li></ul></div>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-copyright">© 2026 devflowbytegrid.com · Warwick, United Kingdom · All rights reserved.</div>
+                <div class="footer-legal"><a href="privacy-policy.html">Privacy Policy</a><a href="terms-of-service.html">Terms of Service</a><a href="technical-compliance.html">Technical Compliance</a><a href="app-ads.txt" rel="ads.txt">ads.txt</a></div>
+            </div>
+        </div>
+    </footer>
+    <button class="back-to-top" data-back-to-top aria-label="Back to top"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="19" x2="12" y2="5"/><polyline points="5 12 12 5 19 12"/></svg></button>
+    <script src="js/main.js" defer></script>
+</body>
+</html>
